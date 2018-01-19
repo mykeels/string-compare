@@ -18,4 +18,8 @@ describe('String.compare', () => {
     it('should be > 0.5 if strings are non-empty and second string is found in first', () => {
         assert.isTrue(String.compare('hello', 'he') > 0.5)
     })
+    
+    it('should be > 0.5 ', () => {
+        assert.equal(String.compare('Hello world', 'Helo'), 0)
+    })
 })
