@@ -1,4 +1,4 @@
-require('../src/index')
+const compareStrings = require ('../src/index')
 
 const { assert } = require('chai')
 
