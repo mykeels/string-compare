@@ -19,5 +19,8 @@ or
 ```js
     const compareStrings = require('string-compare')
 
-    compareStrings('Hello World', 'helo')
+    compareStrings('Hello World', 'helo') //0.4
+    compareStrings('Hello World', 'Helo') //0.5
+    compareStrings('Hello World', 'word') //0.4
+    compareStrings('Hello World', 'Word') //0.5
 ```

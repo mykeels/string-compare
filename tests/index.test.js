@@ -22,4 +22,12 @@ describe('String.compare', () => {
     it('should be > 0.5 ', () => {
         assert.equal(String.compare('Hello world', 'Helo'), 0)
     })
+    
+    it('"Hello World" -> "word" should be 0.5 ', () => {
+        assert.equal(String.compare('Hello World', 'word'), 0.4)
+    })
+    
+    it('"Hello World" -> "Word" should be 0.5', () => {
+        assert.equal(String.compare('Hello World', 'Word'), 0.5)
+    })
 })
