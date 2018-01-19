@@ -5,7 +5,7 @@ Used to compare two strings to get the degree of similarity between 0 and 1
 ## Usage
 
 ```bash
-    npm install --save string-compare
+    npm i -s string-compare
 ```
 
 ```js
