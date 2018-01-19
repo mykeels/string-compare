@@ -2,7 +2,7 @@
   "name": "string-compare",
   "version": "1.0.0",
   "description": "A utility to compare strings for similarity",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha -R spec --watch --recursive ./tests"
   },
