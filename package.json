@@ -1,0 +1,23 @@
+{
+  "name": "string-compare",
+  "version": "1.0.0",
+  "description": "A utility to compare strings for similarity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mykeels/string-compare.git"
+  },
+  "keywords": [
+    "string",
+    "compare"
+  ],
+  "author": "mykeels",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mykeels/string-compare/issues"
+  },
+  "homepage": "https://github.com/mykeels/string-compare#readme"
+}
