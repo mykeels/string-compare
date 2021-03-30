@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "allowJs": true,
+        "checkJs": true,
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "outDir": "./dist",
+        "lib": [
+            "ES6",
+            "ES2019",
+            "ES2020"
+        ],
+        "sourceMap": true
+    },
+    "compileOnSave": false,
+    "include": [
+        "src/**/*.js"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.js",
+        "commonjs"
+    ]
+}
