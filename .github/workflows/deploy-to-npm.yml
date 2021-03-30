@@ -23,6 +23,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: npm run test
+      working-directory: ${{env.working-directory}}
+    - run: npm run build
+      working-directory: ${{env.working-directory}}
+    - run: npm run build:tsc
+      working-directory: ${{env.working-directory}}
     - name: deploying to npm
       uses: JS-DevTools/npm-publish@v1
       with:
