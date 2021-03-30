@@ -46,6 +46,11 @@ const matchStrings = (s1, s2) => {
     return score;
 }
 
+/**
+ * Compare two strings to get their similarity in numbers between 0 and 1
+ * @param {string} s1 
+ * @param {string} s2 
+ */
 export const compare = (s1, s2) => {
     if ([s1, s2].includes("")) return 1;
     if (s1?.toLowerCase() === s2?.toLowerCase()) return 1;
