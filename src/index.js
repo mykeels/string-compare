@@ -47,6 +47,7 @@ const matchStrings = (s1, s2) => {
 }
 
 String.compare = (s1, s2) => {
+    if ([s1, s2].includes("")) return 1;
     let start = 0;
     let end = start + s2.length;
     let maxval = 0;
@@ -56,7 +57,7 @@ String.compare = (s1, s2) => {
         start++;
         end++;
     }
-    return maxval || 0;
+    return Math.min(maxval, 1) || 0;
 }
 
 module.exports = String.compare
