@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A utility to compare strings for similarity",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "build": "webpack",
     "watch:tsc": "tsc --watch -p ./tsconfig.json",
