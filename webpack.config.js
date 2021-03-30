@@ -5,15 +5,20 @@ module.exports = {
   target: "node",
   devtool: "inline-cheap-module-source-map",
   entry: {
-    index: "./src/index.js"
+    index: "./src/index.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
-    libraryTarget: "commonjs"
+    libraryTarget: "commonjs",
   },
   optimization: {
-    minimize: false
+    minimize: false,
+  },
+  resolve: {
+    fallback: {
+      fs: false,
+    },
   },
   module: {
     rules: [
@@ -24,23 +29,20 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: [
-              [
-                "@babel/preset-env",
-                {
-                  targets: { node: "12" },
-                  useBuiltIns: "usage",
-                  corejs: 3
-                }
-              ]
+            exclude: [
+              // \\ for Windows, \/ for Mac OS and Linux
+              /node_modules[\\\/]core-js/,
+              /node_modules[\\\/]webpack[\\\/]buildin/,
             ],
-            plugins: ["source-map-support"]
-          }
-        }
-      }
-    ]
+            presets: [
+              "@babel/preset-env",
+            ]
+          },
+        },
+      },
+    ],
   },
   plugins: [],
   node: false,
-  externals: {}
+  externals: {},
 };
