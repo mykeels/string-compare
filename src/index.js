@@ -46,7 +46,7 @@ const matchStrings = (s1, s2) => {
     return score;
 }
 
-const compare = (s1, s2) => {
+export const compare = (s1, s2) => {
     if ([s1, s2].includes("")) return 1;
     if (s1?.toLowerCase() === s2?.toLowerCase()) return 1;
     let start = 0;
@@ -61,5 +61,4 @@ const compare = (s1, s2) => {
     return maxval || 0;
 }
 
-module.exports = compare;
-module.exports.compare = compare;
+export default compare;
