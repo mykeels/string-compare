@@ -47,12 +47,14 @@ const matchStrings = (s1, s2) => {
 }
 
 String.compare = (s1, s2) => {
+    if ([s1, s2].includes("")) return 1;
+    if (s1?.toLowerCase() === s2?.toLowerCase()) return 1;
     let start = 0;
     let end = start + s2.length;
     let maxval = 0;
     while (end <= s1.length) {
         var sub = s1.substring(start, end);
-        maxval = Math.max(matchStrings(sub, s2), maxval);
+        maxval = Math.max(matchStrings(sub.toLowerCase(), s2.toLowerCase()), maxval);
         start++;
         end++;
     }
