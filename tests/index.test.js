@@ -3,12 +3,12 @@ const compareStrings = require ('../src/index')
 const { assert } = require('chai')
 
 describe('String.compare', () => {
-    it('should return 0 if both strings are empty', () => {
-        assert.equal(String.compare('', ''), 0)
+    it('should return 1 if both strings are empty', () => {
+        assert.equal(String.compare('', ''), 1)
     })
 
-    it('should return 0 if one of strings is empty', () => {
-        assert.equal(String.compare('hello', ''), 0)
+    it('should return 1 if one of strings is empty', () => {
+        assert.equal(String.compare('hello', ''), 1)
     })
 
     it('should return 1 if strings are non-empty and same', () => {
@@ -19,12 +19,12 @@ describe('String.compare', () => {
         assert.isTrue(String.compare('hello', 'he') > 0.5)
     })
     
-    it('should be > 0.5 ', () => {
-        assert.equal(String.compare('Hello world', 'Helo'), 0)
+    it('should be > 0.5', () => {
+        assert.equal(String.compare('Hello world', 'Helo'), 0.5)
     })
     
-    it('"Hello World" -> "word" should be 0.5 ', () => {
-        assert.equal(String.compare('Hello World', 'word'), 0.4)
+    it('"Hello World" -> "word" should be 0.5', () => {
+        assert.equal(String.compare('Hello World', 'word'), 0.5)
     })
     
     it('"Hello World" -> "Word" should be 0.5', () => {
