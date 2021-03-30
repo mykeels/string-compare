@@ -58,7 +58,7 @@ export const compare = (s1, s2) => {
         start++;
         end++;
     }
-    return maxval || 0;
+    return Math.min(maxval, 1) || 0;
 }
 
 export default compare;
