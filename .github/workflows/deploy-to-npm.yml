@@ -37,7 +37,7 @@ jobs:
         token: ${{ secrets.NPM_TOKEN }}
     - name: bump version
       run: |
-        rm -f ./.npmrc
+        printf "//`node -p \"require('url').parse(process.env.NPM_REGISTRY_URL || 'https://registry.npmjs.org').host\"`/:_authToken=${NPM_TOKEN}\nregistry=${NPM_REGISTRY_URL:-https://registry.npmjs.org}\n" >> ~/.npmrc
         npm version patch
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
